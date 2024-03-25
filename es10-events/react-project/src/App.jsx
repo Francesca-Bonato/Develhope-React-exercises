@@ -8,11 +8,11 @@ export function App() {
   }
 
   return (
-    <>
+    <div>
       <h1>Clock App</h1>
       <p>Click on the button below to see the current time</p>
       <AlertClock onClick={handleShowTime} label="Click Me!"/>
-    </>
+    </div>
   );
 }
 
