@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 import { CounterDisplay } from "./CounterDisplay";
 import { useState } from "react";
 
-export function Counter({ initialValue = 0, increment = 1 , decrement = 1}) {
+export function Counter(props) {
+  const { initialValue = 0, increment = 1, decrement = 1} = props;
+  
   const [counter, setCounter] = useState(initialValue);
 
   function handleIncrementCounter() {
