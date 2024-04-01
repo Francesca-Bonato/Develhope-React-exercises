@@ -1,0 +1,35 @@
+.input {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #c1b9b9;
+  box-shadow: 3px 3px 12px #a6a6a6, -3px -3px 12px #ffffff;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+.button {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #c1b9b9;
+  background-color: #fbd4ff;
+  box-shadow: 3px 3px 12px #a6a6a6, -3px -3px 12px #ffffff;
+}
+
+.toDoList {
+    margin: 20px 35px;
+    padding: 20px;
+    border-top: 1px solid black;
+
+}
+
+.listButton {
+    margin: 0px 15px;
+    padding: 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #c1b9b9;
+    background-color: #ffce7e;
+    box-shadow: 3px 3px 12px #a6a6a6, -3px -3px 12px #ffffff;
+}

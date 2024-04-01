@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
+import "./clock.scss"
 
 export function Clock() {
   const [date, setDate] = useState(new Date());
@@ -14,7 +15,7 @@ export function Clock() {
 
   return (
     <>
-      <h2>Current time: {date.toLocaleTimeString()}</h2>
+      <h2 className="clock">Current time: {date.toLocaleTimeString()}</h2>
     </>
   );
 }

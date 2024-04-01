@@ -13,6 +13,7 @@
 */
 
 import { useState } from "react";
+import classes from "./ToDoList.module.css";
 
 export function ToDoList() {
   const [todos, setTodos] = useState([]);
@@ -39,17 +40,8 @@ export function ToDoList() {
 
   return (
     <>
-    
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>
-            {todo}
-            <button onClick={() => handleRemoveTask(index)}>Remove task</button>
-            {/*passando direttametne handleRemoveTask(index) a onClick fa sì che la funzione venga eseguita immediatamente durante la fase di rendering anziché attendere l'evento di click.*/}
-          </li>
-        ))}
-      </ul>
       <input
+        className={classes.input}
         onChange={handleTaskInput}
         type="text"
         name="todoInput"
@@ -57,8 +49,26 @@ export function ToDoList() {
         placeholder="next task..."
         value={todo}
       />
-      <button onClick={handleAddTodo}>Add to To-Do list</button>
-      <button onClick={handleResetList}>Reset To-Do list</button>
+      <button className={classes.button} onClick={handleAddTodo}>
+        Add to To-Do list
+      </button>
+      <button className={classes.button} onClick={handleResetList}>
+        Reset To-Do list
+      </button>
+      <ul className={classes.toDoList}>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            {todo}
+            <button
+              className={classes.listButton}
+              onClick={() => handleRemoveTask(index)}
+            >
+              Remove task
+            </button>
+            {/*passando direttametne handleRemoveTask(index) a onClick fa sì che la funzione venga eseguita immediatamente durante la fase di rendering anziché attendere l'evento di click.*/}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
