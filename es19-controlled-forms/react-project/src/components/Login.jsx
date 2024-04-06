@@ -7,7 +7,7 @@ passing it the state, that will print the state value.
 
 import { useState } from "react";
 
-export function Login({loginFunction}) {
+export function Login({ loginFunction }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,25 +21,31 @@ export function Login({loginFunction}) {
     setPassword(passwordInput);
   }
 
-  function handleLoginButton() {
-    loginFunction(username, password);
-  }
-
   return (
     <>
+      <h2>My Login</h2>
+      <label htmlFor="username">Username:</label>
+      <br />
       <input
         onChange={handleUsernameInputChange}
         type="text"
         name="username"
         value={username}
+        id="username"
       />
+      <br />
+      <label htmlFor="password">Password:</label>
+      <br />
       <input
         onChange={handlePasswordInputChange}
         type="password"
         name="password"
         value={password}
+        id="password"
       />
-      <button onClick={handleLoginButton} disabled={!username || !password}>
+      <br />
+      <br />
+      <button onClick={() => loginFunction(username, password)} disabled={!username || !password}>
         Login
       </button>
     </>
