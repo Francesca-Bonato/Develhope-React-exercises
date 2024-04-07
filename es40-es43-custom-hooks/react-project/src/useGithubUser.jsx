@@ -39,5 +39,5 @@ export function useGithubUser(username) {
     console.log(userdata);
   }, [userdata]);
 
-  return {userdata, loading, error}
+  return {userdata, loading, error, fetchUserdata}
 }
