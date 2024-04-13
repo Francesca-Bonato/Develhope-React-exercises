@@ -3,7 +3,7 @@
 import { useCounter } from "./useCounter";
 
 export function Counter() {
-  const {counter, onIncrement, onDecrement, onReset} = useCounter(0, 1, 2)
+  const {counter, onIncrement, onDecrement, onReset} = useCounter()
   
   return (
     <>
