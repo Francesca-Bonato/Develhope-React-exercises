@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-// Create a GithubUser component that receives a username prop and fetches the data of the corresponding Github user from the Github API.
-// The component should render the user's name, login and avatar.
 
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-export function GithubUser() {
+export function ShowGithubUser() {
   const { username } = useParams();
 
   const [userdata, setUserdata] = useState(null);
@@ -39,11 +37,6 @@ export function GithubUser() {
   useEffect(() => {
     fetchUserdata(username);
   }, [username]);
-
-  //A second useEffect is used to log the updated value of userdata
-  useEffect(() => {
-    console.log(userdata);
-  }, [userdata]);
 
   return (
     <>
